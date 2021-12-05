@@ -28,7 +28,7 @@ input[0].length.times do |idx|
 
   if carbon_rating.length() > 1
     carbon_criteria = (1 - calculate_bit_sum(carbon_rating, idx)).to_s
-    carbon_rating = carbon_rating.select { |bits| bits[idx] == carbon_criteria }
+    carbon_rating = carbon_rating.select { |bits| bits[idx] == carbon_criteria.to_s }
   end
 end
 
